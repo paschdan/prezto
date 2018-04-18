@@ -268,3 +268,6 @@ if ! zstyle -t ':prezto:module:git:alias' skip 'yes'; then
   alias gwx='git rm -r'
   alias gwX='git rm -rf'
 fi
+
+# Cleanup
+alias gcu='git branch --merged | grep -v "\*" | grep -Ev "(\*|master|develop|staging)" | xargs -n 1 git branch -d'
